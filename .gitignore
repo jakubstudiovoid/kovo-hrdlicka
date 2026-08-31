@@ -1,0 +1,16 @@
+node_modules
+.output
+.vinxi
+.nitro
+.tanstack
+.vercel
+dist
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+screenshots
+.grok
+routeTree.gen.ts
+attachments
