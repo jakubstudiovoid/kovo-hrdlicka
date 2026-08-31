@@ -4,10 +4,25 @@ import { PageHero } from "@/components/home-page";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SiteShell } from "@/components/site-shell";
-import { projects } from "@/data/projects";
+import {
+  categorySlug,
+  projectTypes,
+  projects,
+} from "@/data/projects";
 import { seoHead } from "@/lib/seo";
+import { cn } from "@/lib/utils";
+
+type RealizaceSearch = {
+  typ?: string;
+};
 
 export const Route = createFileRoute("/realizace/")({
+  validateSearch: (search: Record<string, unknown>): RealizaceSearch => ({
+    typ:
+      typeof search.typ === "string" && search.typ.length > 0
+        ? search.typ
+        : undefined,
+  }),
   head: () =>
     seoHead(
       "Realizace",
@@ -17,6 +32,12 @@ export const Route = createFileRoute("/realizace/")({
 });
 
 function RealizaceIndex() {
+  const { typ } = Route.useSearch();
+  const activeType = projectTypes.find((c) => categorySlug(c) === typ);
+  const visible = activeType
+    ? projects.filter((p) => p.category === activeType)
+    : projects;
+
   return (
     <SiteShell>
       <PageHero kicker="Portfolio" title="Realizace">
@@ -24,11 +45,32 @@ function RealizaceIndex() {
       </PageHero>
 
       <section className="page-grid py-14 md:py-20">
-        <div className="grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-14">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} delay={i * 40} />
+        <nav
+          aria-label="Filtr podle typu"
+          className="mb-10 flex flex-wrap gap-x-1 gap-y-2 border-b border-line"
+        >
+          <FilterLink label="Vše" active={!activeType} />
+          {projectTypes.map((type) => (
+            <FilterLink
+              key={type}
+              label={type}
+              typ={categorySlug(type)}
+              active={activeType === type}
+            />
           ))}
-        </div>
+        </nav>
+
+        {visible.length > 0 ? (
+          <div className="grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-14">
+            {visible.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} delay={i * 40} />
+            ))}
+          </div>
+        ) : (
+          <p className="py-10 text-sm text-muted">
+            V této kategorii zatím nejsou žádné realizace.
+          </p>
+        )}
       </section>
 
       <section className="border-t border-line">
@@ -53,5 +95,33 @@ function RealizaceIndex() {
         </div>
       </section>
     </SiteShell>
+  );
+}
+
+function FilterLink({
+  label,
+  typ,
+  active,
+}: {
+  label: string;
+  typ?: string;
+  active: boolean;
+}) {
+  return (
+    <Link
+      to="/realizace"
+      search={typ ? { typ } : {}}
+      resetScroll={false}
+      activeOptions={{ exact: true, includeSearch: true, explicitUndefined: true }}
+      aria-current={active ? "page" : undefined}
+      className={cn(
+        "-mb-px border-b px-2 pb-3 text-xs tracking-[0.16em] uppercase transition-colors duration-200 sm:px-3",
+        active
+          ? "border-fg text-fg"
+          : "border-transparent text-muted hover:text-fg",
+      )}
+    >
+      {label}
+    </Link>
   );
 }

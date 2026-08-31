@@ -403,3 +403,28 @@ export const projects: Project[] = [
 export function getProject(slug: string) {
   return projects.find((p) => p.slug === slug);
 }
+
+export function categorySlug(category: string) {
+  return category
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+const categoryOrder = [
+  "Schodiště",
+  "Zábradlí",
+  "Brány a ploty",
+  "Terasy",
+  "Přístřešky",
+  "Atyp",
+];
+
+export const projectTypes = [
+  ...categoryOrder.filter((c) => projects.some((p) => p.category === c)),
+  ...[...new Set(projects.map((p) => p.category))].filter(
+    (c) => !categoryOrder.includes(c),
+  ),
+];
