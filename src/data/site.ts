@@ -8,8 +8,8 @@ export const site = {
     "Zakázková kovovýroba HRDL — schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba a montáž. Kovovýroba Hrdlička, Nová Ves nad Nisou.",
   phone: "+420 775 323 303",
   phoneHref: "tel:+420775323303",
-  email: "hrdl.pav@gmail.com",
-  emailHref: "mailto:hrdl.pav@gmail.com",
+  email: "info@kovohrdlicka.cz",
+  emailHref: "mailto:info@kovohrdlicka.cz",
   address: {
     line: "Nová Ves nad Nisou 350",
     city: "Nová Ves nad Nisou",
