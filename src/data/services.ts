@@ -74,16 +74,16 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "atyp",
+    slug: "nabytek",
     number: "06",
-    title: "Atyp a interiér",
-    lead: "Dřevníky, zámečnické prvky a atypické interiérové konstrukce.",
-    body: "Stojany na palivo, zámečnické doplňky, opravy a dostavby stávajících konstrukcí. Konzultace materiálu a povrchové úpravy.",
+    title: "Nábytek",
+    lead: "Lavice, stoly, dřevníky a ocelový nábytek na míru.",
+    body: "Konstrukce z oceli, tahokovu a dřeva. Interiér i exteriér — od lavic a stolů po dřevníky a úložné prvky.",
     items: [
+      "Lavice a stoly",
       "Dřevníky a stojany na palivo",
-      "Zámečnické doplňky",
-      "Opravy a dostavby stávajících konstrukcí",
-      "Konzultace materiálu a povrchu",
+      "Úložné a předsíňové prvky",
+      "Kombinace oceli a dřeva",
     ],
   },
 ];

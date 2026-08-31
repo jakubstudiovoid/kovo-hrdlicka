@@ -51,7 +51,7 @@ export function JsonLd() {
             "Brány a ploty",
             "Terasy a lávky",
             "Přístřešky",
-            "Atypické ocelové konstrukce",
+            "Nábytek",
           ],
         },
       },

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sluzby")({
   head: () =>
     seoHead(
       "Služby",
-      "Schodiště, zábradlí, brány, terasy, přístřešky a atypická kovovýroba. Návrh, výroba a montáž. HRDL, Nová Ves nad Nisou.",
+      "Schodiště, zábradlí, brány, terasy, přístřešky a kovový nábytek. Návrh, výroba a montáž. HRDL, Nová Ves nad Nisou.",
     ),
   component: SluzbyPage,
 });
@@ -21,7 +21,7 @@ function SluzbyPage() {
     <SiteShell>
       <PageHero kicker="Nabídka" title="Služby">
         Zakázková kovovýroba — schodiště, zábradlí, brány, terasy, přístřešky a
-        atypické konstrukce. Návrh, výroba a montáž. Povrchové úpravy zinek, lak
+        nábytek. Návrh, výroba a montáž. Povrchové úpravy zinek, lak
         a nerez.
       </PageHero>
 

@@ -148,15 +148,30 @@ function Intro() {
 
 function Featured() {
   if (!homeProjects.length) return null;
+  const portfolioLink = (
+    <Link
+      to="/realizace"
+      className="inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
+    >
+      Kompletní portfolio
+      <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
+    </Link>
+  );
+
   return (
     <section className="border-b border-line">
       <div className="page-grid py-16 md:py-20">
-        <Reveal>
-          <p className="kicker">Portfolio</p>
-          <h2 className="mt-4 font-medium text-4xl tracking-tight">
-            Vybrané realizace
-          </h2>
-        </Reveal>
+        <div className="flex items-end justify-between gap-6">
+          <Reveal>
+            <p className="kicker">Portfolio</p>
+            <h2 className="mt-4 font-medium text-4xl tracking-tight">
+              Vybrané realizace
+            </h2>
+          </Reveal>
+          <Reveal delay={80} className="hidden sm:block">
+            {portfolioLink}
+          </Reveal>
+        </div>
 
         <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
           {homeProjects.map((project, i) => (
@@ -164,14 +179,8 @@ function Featured() {
           ))}
         </div>
 
-        <Reveal delay={80}>
-          <Link
-            to="/realizace"
-            className="mt-12 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
-          >
-            Kompletní portfolio
-            <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
-          </Link>
+        <Reveal delay={80} className="sm:hidden">
+          <div className="mt-12">{portfolioLink}</div>
         </Reveal>
       </div>
     </section>
