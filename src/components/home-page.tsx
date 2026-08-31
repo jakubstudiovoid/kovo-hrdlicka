@@ -270,44 +270,42 @@ function Process() {
 
 function AboutTeaser() {
   return (
-    <section className="about-portrait border-b border-line">
-      <div className="page-grid py-16 md:py-24">
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
-          <Reveal>
-            <p className="kicker">O firmě</p>
-            <h2 className="mt-5 font-medium text-display tracking-tight">
-              {site.brand}
-            </h2>
-            <p className="mt-2 text-sm tracking-[0.16em] text-muted uppercase">
-              {site.legalName} · IČO {site.ico}
-            </p>
-            <p className="mt-8 text-base leading-relaxed text-muted">
-              Zakázkovou kovovýrobu vedeme jako specializovanou dílnu. Kontakt,
-              návrh i montáž probíhá přímo s&nbsp;výrobcem, bez zprostředkovatele.
-            </p>
-            <Link
-              to="/o-nas"
-              className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
-            >
-              Více o firmě
-              <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
-            </Link>
-          </Reveal>
-          <Reveal delay={80} className="relative">
-            <img
-              src="/hero/pavel-portrait.webp"
-              srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
-              sizes="(min-width: 768px) 32rem, 100vw"
-              width={1680}
-              height={1344}
-              alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
-              loading="lazy"
-              decoding="async"
-              className="about-portrait-img"
-            />
-            <div className="about-portrait-fade" aria-hidden="true" />
-          </Reveal>
-        </div>
+    <section className="about-portrait relative overflow-hidden border-b border-line">
+      <div className="relative h-80 w-full md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-1/2">
+        <img
+          src="/hero/pavel-portrait.webp"
+          srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
+          sizes="(min-width: 768px) 50vw, 100vw"
+          width={1680}
+          height={1344}
+          alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
+          loading="lazy"
+          decoding="async"
+          className="about-portrait-img"
+        />
+        <div className="about-portrait-fade" aria-hidden="true" />
+      </div>
+      <div className="page-grid relative py-20 md:py-28">
+        <Reveal className="max-w-md">
+          <p className="kicker">O firmě</p>
+          <h2 className="mt-5 font-medium text-display tracking-tight">
+            {site.brand}
+          </h2>
+          <p className="mt-2 text-sm tracking-[0.16em] text-muted uppercase">
+            {site.legalName} · IČO {site.ico}
+          </p>
+          <p className="mt-8 text-base leading-relaxed text-muted">
+            Zakázkovou kovovýrobu vedeme jako specializovanou dílnu. Kontakt,
+            návrh i montáž probíhá přímo s&nbsp;výrobcem, bez zprostředkovatele.
+          </p>
+          <Link
+            to="/o-nas"
+            className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
+          >
+            Více o firmě
+            <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
