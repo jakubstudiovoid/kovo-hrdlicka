@@ -1,6 +1,6 @@
 Kovovýroba Hrdlička
 
-Pavel Hrdlička, KOVO Hrdlička, Nová Ves nad Nisou.
+Pavel Hrdlička, Kovovýroba Hrdlička, Nová Ves nad Nisou.
 
 ## Kontakt na webu
 

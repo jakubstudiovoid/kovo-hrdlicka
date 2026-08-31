@@ -11,7 +11,7 @@ export const Route = createFileRoute("/o-nas")({
   head: () =>
     seoHead(
       "O firmě",
-      "KOVO Hrdlička — zakázková kovovýroba v Nové Vsi nad Nisou. Schodiště, zábradlí a ocelové konstrukce. Návrh, výroba a montáž.",
+      "Kovovýroba Hrdlička — zakázková kovovýroba v Nové Vsi nad Nisou. Schodiště, zábradlí a ocelové konstrukce. Návrh, výroba a montáž.",
     ),
   component: AboutPage,
 });

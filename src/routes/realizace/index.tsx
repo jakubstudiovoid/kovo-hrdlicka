@@ -11,7 +11,7 @@ export const Route = createFileRoute("/realizace/")({
   head: () =>
     seoHead(
       "Realizace",
-      "Hotové zakázky KOVO Hrdlička — schodiště, zábradlí, brány a ocelové konstrukce. Nová Ves nad Nisou.",
+      "Hotové zakázky Kovovýroba Hrdlička — schodiště, zábradlí, brány a ocelové konstrukce. Nová Ves nad Nisou.",
     ),
   component: RealizaceIndex,
 });

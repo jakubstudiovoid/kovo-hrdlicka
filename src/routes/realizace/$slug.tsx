@@ -13,7 +13,7 @@ export const Route = createFileRoute("/realizace/$slug")({
       project ? project.title : "Realizace",
       project
         ? `${project.title} — ${project.excerpt}`
-        : "Realizace KOVO Hrdlička.",
+        : "Realizace Kovovýroba Hrdlička.",
     );
   },
   component: ProjectPage,

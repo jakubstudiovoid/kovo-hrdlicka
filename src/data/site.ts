@@ -1,11 +1,11 @@
 export const site = {
   name: "HRDL",
   legalName: "Pavel Hrdlička",
-  brand: "KOVO Hrdlička",
+  brand: "Kovovýroba Hrdlička",
   ico: "18002447",
   tagline: "Zakázková kovovýroba",
   description:
-    "Zakázková kovovýroba HRDL — schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba a montáž. KOVO Hrdlička, Nová Ves nad Nisou.",
+    "Zakázková kovovýroba HRDL — schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba a montáž. Kovovýroba Hrdlička, Nová Ves nad Nisou.",
   phone: "+420 775 323 303",
   phoneHref: "tel:+420775323303",
   email: "hrdl.pav@gmail.com",
