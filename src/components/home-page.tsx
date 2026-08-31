@@ -293,11 +293,11 @@ function AboutTeaser() {
               <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
             </Link>
           </Reveal>
-          <div className="relative grid min-h-80 overflow-hidden">
+          <div className="about-portrait-photo relative grid min-h-80">
             <img
               src="/hero/pavel-portrait.webp"
               srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
-              sizes="(min-width: 768px) 32rem, 100vw"
+              sizes="(min-width: 768px) 50vw, 100vw"
               width={1680}
               height={1344}
               alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
@@ -305,7 +305,6 @@ function AboutTeaser() {
               decoding="async"
               className="about-portrait-img"
             />
-            <div className="about-portrait-fade" aria-hidden="true" />
           </div>
         </div>
       </div>
