@@ -11,7 +11,7 @@ export const Route = createFileRoute("/realizace/")({
   head: () =>
     seoHead(
       "Realizace",
-      "Hotové zakázky KOVO Hrdlička — schodiště, zábradlí a ocelové konstrukce na míru. Nová Ves nad Nisou.",
+      "Hotové zakázky KOVO Hrdlička — schodiště, zábradlí a ocelové konstrukce. Nová Ves nad Nisou.",
     ),
   component: RealizaceIndex,
 });
@@ -19,43 +19,42 @@ export const Route = createFileRoute("/realizace/")({
 function RealizaceIndex() {
   return (
     <SiteShell>
-      <PageHero kicker="Archiv" title="Realizace">
-        Vybrané kusy z dílny. Každá zakázka je jiná — podle domu, terénu a toho,
-        co má ocel dělat.
+      <PageHero kicker="Portfolio" title="Realizace">
+        Vybrané zakázky. Každá konstrukce je navržena podle objektu a účelu.
       </PageHero>
 
-      <section className="page-grid py-16 md:py-24">
+      <section className="page-grid py-14 md:py-20">
         {projects.map((project, i) => (
           <Reveal key={project.slug} delay={i * 80}>
             <Link
               to="/realizace/$slug"
               params={{ slug: project.slug }}
-              className="group grid items-end gap-8 lg:grid-cols-12"
+              className="group block"
             >
-              <div className="overflow-hidden bg-surface lg:col-span-7">
+              <div className="overflow-hidden bg-surface">
                 <img
                   src={project.cover.src}
                   srcSet="/realizace/schodiste-800.webp 800w, /realizace/schodiste-1200.webp 1200w, /realizace/schodiste-full.webp 1536w"
-                  sizes="(min-width: 1024px) 55vw, 100vw"
+                  sizes="(min-width: 768px) 704px, 100vw"
                   width={project.cover.width}
                   height={project.cover.height}
                   alt={project.cover.alt}
-                  className="img-frame aspect-3/4 w-full object-cover object-[58%_38%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] md:aspect-4/5"
+                  className="img-frame aspect-4/5 w-full object-cover object-[58%_38%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
                 />
               </div>
-              <div className="lg:col-span-5 lg:pb-4">
+              <div className="mt-6">
                 <p className="text-xs tracking-[0.2em] text-subtle uppercase">
                   {project.year} — {project.category}
                 </p>
-                <h2 className="mt-4 font-medium text-4xl tracking-tight">
+                <h2 className="mt-3 font-medium text-3xl tracking-tight">
                   {project.title}
                 </h2>
-                <p className="mt-2 text-sm text-muted">{project.location}</p>
-                <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
+                <p className="mt-1 text-sm text-muted">{project.location}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
                   {project.excerpt}
                 </p>
-                <span className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase">
-                  Otevřít
+                <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase">
+                  Detail realizace
                   <ArrowUpRight
                     className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     strokeWidth={1.75}
@@ -68,19 +67,18 @@ function RealizaceIndex() {
       </section>
 
       <section className="border-t border-line">
-        <div className="page-grid py-20 md:py-24">
+        <div className="page-grid py-16 md:py-20">
           <Reveal>
             <p className="kicker">Další práce</p>
-            <h2 className="mt-4 max-w-xl font-medium text-3xl tracking-tight">
-              Stejná dílna. Jiný tvar.
+            <h2 className="mt-4 font-medium text-3xl tracking-tight">
+              Obory výroby
             </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">
-              Kromě interiérových schodišť vznikají v dílně brány, ploty,
-              venkovní schodiště, terasy, přístřešky a atypické konstrukce —
-              žárový zinek, černý lak, tahokov, dřevo v ocelovém rámu.
+            <p className="mt-4 text-sm leading-relaxed text-muted">
+              Kromě interiérových schodišť vyrábíme brány, ploty, venkovní
+              schodiště, terasy, přístřešky a atypické konstrukce.
             </p>
           </Reveal>
-          <ul className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-px bg-line sm:grid-cols-2">
             {services.map((s, i) => (
               <Reveal key={s.slug} as="li" delay={i * 50}>
                 <Link
@@ -91,10 +89,10 @@ function RealizaceIndex() {
                   <span className="text-xs tracking-[0.18em] text-subtle">
                     {s.number}
                   </span>
-                  <span className="mt-8 font-medium text-xl tracking-tight">
+                  <span className="mt-6 font-medium text-xl tracking-tight">
                     {s.title}
                   </span>
-                  <span className="mt-3 text-sm leading-relaxed text-muted">
+                  <span className="mt-2 text-sm leading-relaxed text-muted">
                     {s.lead}
                   </span>
                 </Link>

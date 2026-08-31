@@ -52,7 +52,7 @@ export function Header() {
       >
         <div className="page-grid flex h-16 items-center justify-between md:h-[4.5rem]">
           <Logo />
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Hlavní">
+          <nav className="hidden items-center gap-6 xl:gap-7 lg:flex" aria-label="Hlavní">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -64,13 +64,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="hidden items-center gap-6 lg:flex">
-            <a
-              href={site.phoneHref}
-              className="text-xs tracking-[0.14em] text-muted uppercase transition-colors duration-200 hover:text-fg"
-            >
-              {site.phone}
-            </a>
+          <div className="hidden items-center gap-5 lg:flex">
             <Button asChild size="md">
               <Link to="/kontakt">
                 Poptávka
@@ -116,7 +110,7 @@ export function Header() {
         aria-hidden={!open}
       >
         <nav
-          className="flex h-full flex-col justify-end px-5 pb-10 pt-24"
+          className="page-grid flex h-full flex-col justify-end pb-10 pt-24"
           aria-label="Mobilní"
         >
           <ul className="flex flex-col gap-1">
@@ -131,7 +125,7 @@ export function Header() {
               >
                 <Link
                   to={item.to}
-                  className="block py-2 font-medium text-[2.35rem] leading-none tracking-tight text-fg"
+                  className="block py-2 font-medium text-4xl leading-none tracking-tight text-fg"
                 >
                   {item.label}
                 </Link>

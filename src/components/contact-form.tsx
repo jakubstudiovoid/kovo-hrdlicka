@@ -48,13 +48,13 @@ export function ContactForm({ tone = "dark" }: ContactFormProps) {
         )}
       >
         <Check className="size-5" strokeWidth={1.5} />
-        <p className="text-lg tracking-tight">Otevřel se e-mail.</p>
+        <p className="text-lg tracking-tight">E-mailový klient je otevřen.</p>
         <p className={cn("text-sm leading-relaxed", light ? "text-ink-muted" : "text-muted")}>
           Pokud se poštovní klient nespustil, napište přímo na{" "}
           <a href={site.emailHref} className="underline">
             {site.email}
           </a>{" "}
-          nebo zavolejte {site.phone}.
+          nebo volejte {site.phone}.
         </p>
       </div>
     );
@@ -68,7 +68,7 @@ export function ContactForm({ tone = "dark" }: ContactFormProps) {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-7">
-      <div className="grid gap-7 md:grid-cols-2">
+      <div className="grid gap-7 sm:grid-cols-2">
         <label className="block">
           <span className={label}>Jméno</span>
           <input
@@ -123,7 +123,7 @@ export function ContactForm({ tone = "dark" }: ContactFormProps) {
           className={cn(field, "min-h-32 resize-y")}
           name="message"
           required
-          placeholder="Rozměry, místo, termín — cokoliv, co už víte."
+          placeholder="Popis zakázky, přibližné rozměry a termín."
         />
       </label>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -132,7 +132,7 @@ export function ContactForm({ tone = "dark" }: ContactFormProps) {
           <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
         </Button>
         <p className={cn("max-w-xs text-xs leading-relaxed", light ? "text-ink-muted" : "text-subtle")}>
-          Odesláním se otevře váš e-mail. Nic se neukládá na server.
+          Odesláním se otevře e-mailový program. Údaje se na server neukládají.
         </p>
       </div>
     </form>

@@ -30,11 +30,11 @@
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
-  --text-3xl: clamp(1.75rem, 1.2rem + 1.6vw, 2.25rem);
-  --text-4xl: clamp(2.25rem, 1.4rem + 2.8vw, 3.5rem);
-  --text-5xl: clamp(2.75rem, 1.4rem + 4.5vw, 5.5rem);
-  --text-hero: clamp(3.25rem, 2.2rem + 8vw, 8.75rem);
-  --text-display: clamp(2.5rem, 1.4rem + 5vw, 5.25rem);
+  --text-3xl: clamp(1.5rem, 1.2rem + 1.1vw, 1.875rem);
+  --text-4xl: clamp(1.75rem, 1.25rem + 1.6vw, 2.25rem);
+  --text-5xl: clamp(2rem, 1.3rem + 2.2vw, 2.75rem);
+  --text-hero: clamp(2.5rem, 1.6rem + 3.4vw, 3.75rem);
+  --text-display: clamp(2.125rem, 1.4rem + 2.4vw, 3.125rem);
 
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out-quart: cubic-bezier(0.23, 1, 0.32, 1);
@@ -83,7 +83,7 @@
     text-wrap: balance;
     letter-spacing: -0.035em;
     font-weight: 500;
-    line-height: 0.95;
+    line-height: 1.05;
   }
 
   p {
@@ -100,19 +100,13 @@
   .page-grid {
     width: 100%;
     margin-inline: auto;
-    max-width: 90rem;
-    padding-inline: 1.25rem;
+    max-width: 48rem;
+    padding-inline: 1.5rem;
   }
 
   @media (min-width: 768px) {
     .page-grid {
       padding-inline: 2rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .page-grid {
-      padding-inline: 3.5rem;
     }
   }
 
@@ -130,12 +124,12 @@
 
   .reveal {
     opacity: 0;
-    transform: translate3d(0, 28px, 0);
-    filter: blur(8px);
+    transform: translate3d(0, 20px, 0);
+    filter: blur(6px);
     transition:
-      opacity 800ms var(--ease-out-expo),
-      transform 800ms var(--ease-out-expo),
-      filter 800ms var(--ease-out-expo);
+      opacity 700ms var(--ease-out-expo),
+      transform 700ms var(--ease-out-expo),
+      filter 700ms var(--ease-out-expo);
     will-change: opacity, transform, filter;
   }
 
@@ -156,18 +150,11 @@
   }
 
   .hero-photo {
-    animation: hero-zoom 1.6s var(--ease-out-expo) both;
+    animation: hero-zoom 1.4s var(--ease-out-expo) both;
   }
 
   .hero-fade {
-    animation: fade-up 1s var(--ease-out-expo) both;
-  }
-
-  .marquee-track {
-    display: flex;
-    gap: 0;
-    width: max-content;
-    animation: marquee 36s linear infinite;
+    animation: fade-up 0.9s var(--ease-out-expo) both;
   }
 
   .img-frame {
@@ -254,8 +241,8 @@
 
 @keyframes hero-zoom {
   from {
-    transform: scale(1.08);
-    opacity: 0.35;
+    transform: scale(1.06);
+    opacity: 0.4;
   }
   to {
     transform: scale(1);
@@ -266,20 +253,11 @@
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: none;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }
 
@@ -288,8 +266,7 @@
   .reveal.is-in,
   .hero-line > span,
   .hero-photo,
-  .hero-fade,
-  .marquee-track {
+  .hero-fade {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

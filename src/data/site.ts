@@ -5,7 +5,7 @@ export const site = {
   ico: "18002447",
   tagline: "Zakázková kovovýroba",
   description:
-    "Zakázková kovovýroba HRDL — schodiště, zábradlí, brány a ocelové konstrukce na míru. Pavel Hrdlička, Nová Ves nad Nisou.",
+    "Zakázková kovovýroba HRDL — schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba a montáž. KOVO Hrdlička, Nová Ves nad Nisou.",
   phone: "+420 775 323 303",
   phoneHref: "tel:+420775323303",
   email: "hrdl.pav@gmail.com",
@@ -27,7 +27,7 @@ export const site = {
 export const nav = [
   { to: "/realizace" as const, label: "Realizace" },
   { to: "/sluzby" as const, label: "Služby" },
-  { to: "/o-nas" as const, label: "O řemesle" },
+  { to: "/o-nas" as const, label: "O firmě" },
   { to: "/kontakt" as const, label: "Kontakt" },
 ];
 

@@ -16,45 +16,44 @@ export const Route = createFileRoute("/soukromi")({
 function PrivacyPage() {
   return (
     <SiteShell>
-      <PageHero kicker="Právní" title="Ochrana soukromí">
-        Krátce a na rovinu. Žádné sledovací cookies, žádný marketingový pixel.
+      <PageHero kicker="Právní informace" title="Ochrana soukromí">
+        Zpracování osobních údajů v souvislosti s poptávkou a zakázkou. Web
+        nepoužívá sledovací cookies.
       </PageHero>
-      <article className="page-grid max-w-2xl py-16 text-sm leading-relaxed text-muted">
-        <h2 className="text-fg font-medium text-xl tracking-tight">Správce</h2>
+      <article className="page-grid py-14 text-sm leading-relaxed text-muted md:py-16">
+        <h2 className="font-medium text-xl tracking-tight text-fg">Správce</h2>
         <p className="mt-4">
           {site.legalName}, IČO {site.ico}, {site.address.full}. Telefon{" "}
           {site.phone}, e-mail {site.email}.
         </p>
-        <h2 className="mt-10 text-fg font-medium text-xl tracking-tight">
-          Co zpracovávám
+        <h2 className="mt-10 font-medium text-xl tracking-tight text-fg">
+          Rozsah zpracování
         </h2>
         <p className="mt-4">
-          Pokud napíšete nebo zavoláte, zpracuji jméno, kontakt a popis zakázky
-          — jen proto, abych mohl odpovědět a zakázku splnit. Údaje nikomu
-          neprodávám a nepředávám třetím stranám k marketingu.
+          Při poptávce nebo telefonickém kontaktu zpracováváme jméno, kontaktní
+          údaje a popis zakázky výhradně za účelem odpovědi a plnění zakázky.
+          Údaje nepředáváme třetím stranám k marketingu.
         </p>
-        <h2 className="mt-10 text-fg font-medium text-xl tracking-tight">
+        <h2 className="mt-10 font-medium text-xl tracking-tight text-fg">
           Cookies a měření
         </h2>
         <p className="mt-4">
           Web nepoužívá cookies pro sledování ani nástroje typu Google
-          Analytics. Technicky nutné údaje prohlížeče (např. jazyk, šířka okna)
-          zůstávají u vás.
+          Analytics.
         </p>
-        <h2 className="mt-10 text-fg font-medium text-xl tracking-tight">
+        <h2 className="mt-10 font-medium text-xl tracking-tight text-fg">
           Formulář
         </h2>
         <p className="mt-4">
-          Poptávkový formulář nic neukládá na server. Otevře váš e-mailový
-          program s předvyplněnou zprávou. Odeslání tedy probíhá ve vašem
-          klientovi.
+          Poptávkový formulář nic neukládá na server. Otevře e-mailový program
+          s předvyplněnou zprávou. Odeslání probíhá ve vašem klientovi.
         </p>
-        <h2 className="mt-10 text-fg font-medium text-xl tracking-tight">
+        <h2 className="mt-10 font-medium text-xl tracking-tight text-fg">
           Práva
         </h2>
         <p className="mt-4">
-          Máte právo na přístup, opravu a výmaz údajů, které o vás vedu v
-          souvislosti se zakázkou. Stačí napsat na {site.email}.
+          Máte právo na přístup, opravu a výmaz údajů vedených v souvislosti se
+          zakázkou. Kontakt: {site.email}.
         </p>
       </article>
     </SiteShell>

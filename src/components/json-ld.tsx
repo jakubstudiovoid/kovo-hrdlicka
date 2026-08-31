@@ -58,7 +58,7 @@ export function JsonLd() {
       {
         "@type": "Person",
         name: site.legalName,
-        jobTitle: "Zámečník / kovovýroba",
+        jobTitle: "Kovovýroba",
         address: {
           "@type": "PostalAddress",
           addressLocality: site.address.city,

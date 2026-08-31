@@ -21,14 +21,13 @@ function KontaktPage() {
 
   return (
     <SiteShell>
-      <PageHero kicker="Poptávka" title="Napište. Zavolejte. Přijedu.">
-        Nejrychlejší je telefon. Když chcete poslat foto místa, hodí se e-mail
-        nebo formulář.
+      <PageHero kicker="Poptávka" title="Kontakt">
+        Telefon, e-mail nebo poptávkový formulář. Dílna v Nové Vsi nad Nisou.
       </PageHero>
 
       <section className="border-b border-line">
-        <div className="page-grid grid gap-16 py-16 md:grid-cols-12 md:py-24">
-          <Reveal className="md:col-span-5">
+        <div className="page-grid py-14 md:py-20">
+          <Reveal>
             <ul className="flex flex-col gap-8">
               <li>
                 <p className="kicker mb-2">Telefon</p>
@@ -49,7 +48,7 @@ function KontaktPage() {
                 </a>
               </li>
               <li>
-                <p className="kicker mb-2">Dílna</p>
+                <p className="kicker mb-2">Sídlo</p>
                 <p className="text-base leading-relaxed">
                   {site.address.line}
                   <br />
@@ -79,21 +78,24 @@ function KontaktPage() {
               </li>
             </ul>
           </Reveal>
-          <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
+          <Reveal delay={80} className="mt-14 border-t border-line pt-14">
+            <p className="kicker mb-8">Formulář</p>
             <ContactForm />
           </Reveal>
         </div>
       </section>
 
       <section>
-        <div className="relative h-[50vh] min-h-80 overflow-hidden bg-surface">
-          <iframe
-            title={`Mapa — ${site.address.city}`}
-            src={mapSrc}
-            className="h-full w-full grayscale contrast-125"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+        <div className="page-grid py-10 md:py-12">
+          <div className="relative h-72 overflow-hidden bg-surface md:h-80">
+            <iframe
+              title={`Mapa — ${site.address.city}`}
+              src={mapSrc}
+              className="h-full w-full grayscale contrast-125"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
     </SiteShell>

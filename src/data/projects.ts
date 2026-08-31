@@ -26,11 +26,10 @@ export const projects: Project[] = [
     year: "2025",
     category: "Schodiště",
     excerpt:
-      "Světlé dřevěné stupně, černé ocelové zábradlí, otevřený prostor až do krovu. Jedna linie od přízemí do galerie.",
+      "Interiérové schodiště se světlými dřevěnými stupni a černým ocelovým zábradlím. Konstrukce spojuje přízemí s galerií.",
     body: [
-      "Schodiště spojuje dvě podlaží otevřeného domu s pohledovým krovem. Stupně ze světlého dřeva nesou černou ocelovou konstrukci. Zábradlí je vodorovné, tiché — drží předpis a nechá dřevo i světlo pracovat.",
-      "Pohled shora dolů do schodišťové šachty je součástí návrhu: zábradlí kreslí rastr přes bílé stěny, galerie zůstává otevřená, nic zbytečně nezahušťuje prostor.",
-      "Kotvení, výška madla i rozteč výplní jsou řešené jako jeden celek se schodištěm. Žádný dodatečný zámečník, žádný kompromis mezi dvěma firmami.",
+      "Schodiště propojuje dvě podlaží otevřeného domu s pohledovým krovem. Stupně ze světlého dřeva nese černá ocelová konstrukce. Zábradlí s vodorovnou výplní splňuje předepsané parametry a zachovává průhlednost prostoru.",
+      "Kotvení, výška madla a rozteč výplní jsou řešeny jako jeden celek se schodištěm.",
     ],
     materials: ["Ocel", "Černý lak", "Dřevo", "Vodorovná výplň"],
     cover: {

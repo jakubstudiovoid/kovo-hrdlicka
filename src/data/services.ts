@@ -12,8 +12,8 @@ export const services: Service[] = [
     slug: "schodiste",
     number: "01",
     title: "Schodiště",
-    lead: "Interiér i exteriér. Přímé, točité, s podestou — podle domu, ne podle katalogu.",
-    body: "Ocelová konstrukce nese dřevěné stupně, pororošt nebo plech. Spočítám stoupání, zaměřím na stavbě a vyrobím tak, aby schody seděly na milimetr. Zábradlí je součástí návrhu, ne dodatečná myšlenka.",
+    lead: "Interiérová a venkovní schodiště — přímá, točitá i s podestou.",
+    body: "Ocelová konstrukce s dřevěnými stupni, pororoštem nebo plechem. Stoupání a kotvení se stanoví podle zaměření na stavbě. Zábradlí je součástí návrhu.",
     items: [
       "Interiérová schodiště (dřevo + ocel)",
       "Venkovní schodiště a požární únikové",
@@ -25,8 +25,8 @@ export const services: Service[] = [
     slug: "zabradi",
     number: "02",
     title: "Zábradlí",
-    lead: "Lana, vodorovné příčky, svislé pruty. Čistá linie, která unese ruku i předpis.",
-    body: "Zábradlí k terase, galerii, schodišti i lávce. Černý lak, zinek, nerez. Kotvím do oceli, betonu i dřeva. Výplň volím podle výhledu — aby držela a nepřekážela.",
+    lead: "Nerezová lanka, vodorovné příčky a svislé pruty.",
+    body: "Zábradlí k terasám, galeriím, schodištím a lávkám. Povrchová úprava černým lakem, žárovým zinkem nebo nerezí. Kotvení do oceli, betonu i dřeva.",
     items: [
       "Nerezová lanka",
       "Vodorovné a svislé výplně",
@@ -38,8 +38,8 @@ export const services: Service[] = [
     slug: "brany-ploty",
     number: "03",
     title: "Brány a ploty",
-    lead: "Křídlové i posuvné. Tahokov, tyče, dřevo v ocelovém rámu.",
-    body: "Vjezd, branka, plot — vše, co má zavírat pozemek a slušet domu. Rám svařím, výplň zvolíme spolu. Povrch žárový zinek nebo lak. Kování a zámek jsou součástí zakázky.",
+    lead: "Křídlové a posuvné brány, branky a plotová pole.",
+    body: "Vjezdové brány, branky a ploty. Ocelový rám s výplní z tahokovu, tyčí nebo dřeva. Povrch žárový zinek nebo lak. Kování a zámek jsou součástí dodávky.",
     items: [
       "Křídlové a posuvné brány",
       "Branky a plotová pole",
@@ -51,8 +51,8 @@ export const services: Service[] = [
     slug: "terasy-lavky",
     number: "04",
     title: "Terasy a lávky",
-    lead: "Ocelová konstrukce, která unese terasu, vstup i svah.",
-    body: "Samonosné plošiny, vstupy k domu, lávky v terénu. Pororošt nebo dřevěná pochozí vrstva. Kotvení do země i do stavby. Zábradlí navrhnu jako jeden celek s konstrukcí.",
+    lead: "Ocelové konstrukce teras, vstupních plošin a lávek.",
+    body: "Samonosné plošiny, vstupy k objektu a lávky v terénu. Pochozí vrstva z pororoštu nebo dřeva. Kotvení do země i do stavby. Zábradlí je navrženo jako součást konstrukce.",
     items: [
       "Vstupní plošiny a podesty",
       "Samonosné terasy",
@@ -64,8 +64,8 @@ export const services: Service[] = [
     slug: "pristrešky",
     number: "05",
     title: "Přístřešky a haly",
-    lead: "Technické objekty, sklady, zakrytí. Ocelový skelet, tahokov, střecha.",
-    body: "Když má stát něco, co má vydržet počasí a slušet pozemku. Rám, výplně, střecha, dveře. Atyp podle místa — žádný katalogový box.",
+    lead: "Technické objekty, sklady a zastřešení na ocelovém skeletu.",
+    body: "Ocelový rám, výplně, střecha a dveře. Objekt se navrhuje podle místa a účelu, mimo katalogové řady.",
     items: [
       "Skladové a technické objekty",
       "Přístřešky a zastřešení",
@@ -77,8 +77,8 @@ export const services: Service[] = [
     slug: "atyp",
     number: "06",
     title: "Atyp a interiér",
-    lead: "Dřevníky, stojany, zámečnické detaily. Cokoliv, co má z oceli smysl.",
-    body: "Od designového stojanu na dřevo po ocelový detail v interiéru. Když to nejde koupit a má to být poctivé — vyrobím to.",
+    lead: "Dřevníky, zámečnické prvky a atypické interiérové konstrukce.",
+    body: "Stojany na palivo, zámečnické doplňky, opravy a dostavby stávajících konstrukcí. Konzultace materiálu a povrchové úpravy.",
     items: [
       "Dřevníky a stojany na palivo",
       "Zámečnické doplňky",
@@ -92,22 +92,22 @@ export const processSteps = [
   {
     number: "01",
     title: "Zaměření",
-    text: "Zavoláte, popíšete zadání. Přijedu, zaměřím, projdeme místo. Žádný odhad od stolu, když záleží na milimetru.",
+    text: "Po poptávce následuje zaměření na místě. Rozměry a kotvení se stanoví na stavbě.",
   },
   {
     number: "02",
     title: "Návrh",
-    text: "Tvar, materiál, kotvení, povrch a cena. Uvidíte, co vznikne, než se zapálí hořák. Bez skrytých položek.",
+    text: "Tvar, materiál, kotvení, povrchová úprava a cena. Výroba začíná po odsouhlasení zadání.",
   },
   {
     number: "03",
     title: "Výroba",
-    text: "Dílna v Nové Vsi nad Nisou. Řez, ohyb, svár, povrch. Každý kus projde rukama, které ho kreslily.",
+    text: "Výroba probíhá v dílně v Nové Vsi nad Nisou. Řezání, ohýbání, svařování a povrchová úprava.",
   },
   {
     number: "04",
     title: "Montáž",
-    text: "Osazení na stavbě. Čistě, v domluveném termínu, se vším kováním. Až to sedí, je to hotové.",
+    text: "Osazení na stavbě v dohodnutém termínu, včetně kování a dokončení.",
   },
 ];
 

@@ -6,18 +6,16 @@ import { Button } from "@/components/ui/button";
 export function NotFound() {
   return (
     <SiteShell>
-      <section className="page-grid flex min-h-[80dvh] flex-col justify-end pb-20 pt-32">
+      <section className="page-grid pt-32 pb-20">
         <p className="kicker mb-6">404</p>
-        <h1 className="max-w-3xl font-medium text-display tracking-tight">
-          Tahle stránka
-          <br />
-          tady nestojí.
+        <h1 className="font-medium text-display tracking-tight">
+          Stránka nebyla nalezena
         </h1>
-        <p className="mt-6 max-w-md text-muted">
-          Odkaz je špatně, nebo stránka zmizela. Vraťte se na úvod, nebo rovnou
-          napište.
+        <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
+          Požadovaná adresa neexistuje. Pokračujte na úvodní stránku nebo na
+          kontakt.
         </p>
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-9 flex flex-wrap gap-3">
           <Button asChild>
             <Link to="/">Úvod</Link>
           </Button>
