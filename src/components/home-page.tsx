@@ -62,14 +62,14 @@ function Hero() {
           className="hero-fade mt-9 flex flex-wrap items-center gap-3"
           style={{ animationDelay: "0.5s" }}
         >
+          <Button asChild variant="outline" size="lg">
+            <Link to="/realizace">Realizace</Link>
+          </Button>
           <Button asChild size="lg">
             <Link to="/kontakt">
               Poptávka
               <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
             </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link to="/realizace">Realizace</Link>
           </Button>
         </div>
       </div>

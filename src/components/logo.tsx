@@ -26,7 +26,7 @@ export function Logo({ className, variant = "white", onClick }: LogoProps) {
         className="h-8 w-auto select-none"
       />
       <span className="flex flex-col justify-center leading-none">
-        <span className="text-2xs font-medium tracking-tight text-muted">
+        <span className="translate-y-1 text-2xs font-medium tracking-tight text-muted">
           Kovovýroba
         </span>
         <span className="mt-0.5 text-lg font-medium tracking-tight">
