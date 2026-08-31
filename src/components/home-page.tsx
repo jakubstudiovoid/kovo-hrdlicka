@@ -155,7 +155,7 @@ function Featured() {
       to="/realizace"
       className="inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
     >
-      Kompletní portfolio
+      Zobrazit kompletní portfolio
       <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
     </Link>
   );
