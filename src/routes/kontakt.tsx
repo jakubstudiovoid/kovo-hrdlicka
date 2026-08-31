@@ -22,7 +22,8 @@ function KontaktPage() {
   return (
     <SiteShell>
       <PageHero kicker="Poptávka" title="Kontakt">
-        Telefon, e-mail nebo poptávkový formulář. Dílna v Nové Vsi nad Nisou.
+        Telefon, e-mail nebo poptávkový formulář. Dílna v Nové Vsi nad Nisou,
+        okres Jablonec nad Nisou.
       </PageHero>
 
       <section className="border-b border-line">

@@ -41,7 +41,8 @@ function RealizaceIndex() {
   return (
     <SiteShell>
       <PageHero kicker="Portfolio" title="Realizace">
-        Vybrané zakázky. Každá konstrukce je navržena podle objektu a účelu.
+        Vybrané zakázky. Každá konstrukce je navržena podle objektu, účelu
+        a zaměření na místě.
       </PageHero>
 
       <section className="page-grid py-14 md:py-20">

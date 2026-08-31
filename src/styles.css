@@ -122,6 +122,10 @@
     font-weight: 500;
   }
 
+  .page-hero-lead {
+    min-height: calc(2 * 1.625em);
+  }
+
   .reveal {
     opacity: 0;
     transform: translate3d(0, 20px, 0);

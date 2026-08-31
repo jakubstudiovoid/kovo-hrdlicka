@@ -20,8 +20,8 @@ function AboutPage() {
   return (
     <SiteShell>
       <PageHero kicker="O firmě" title={site.brand}>
-        Zakázková kovovýroba. IČO {site.ico}. Sídlo {site.address.city}, okres
-        Jablonec nad Nisou.
+        Zakázková kovovýroba. IČO {site.ico}. Sídlo Nová Ves nad Nisou,
+        okres Jablonec nad Nisou.
       </PageHero>
 
       <section className="border-b border-line">

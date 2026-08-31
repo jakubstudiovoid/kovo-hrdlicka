@@ -21,9 +21,8 @@ function SluzbyPage() {
   return (
     <SiteShell>
       <PageHero kicker="Nabídka" title="Služby">
-        Zakázková kovovýroba — schodiště, zábradlí, brány, terasy, přístřešky a
-        nábytek. Návrh, výroba a montáž. Povrchové úpravy žárový zinek,
-        práškový lak, duplex a nerez.
+        Schodiště, zábradlí, brány, terasy, přístřešky a nábytek. Návrh, výroba,
+        montáž a povrchové úpravy.
       </PageHero>
 
       <div>

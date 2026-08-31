@@ -62,7 +62,7 @@ function Hero() {
           </span>
         </h1>
         <p
-          className="hero-fade mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base"
+          className="hero-fade page-hero-lead mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base"
           style={{ animationDelay: "0.35s" }}
         >
           Schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba
@@ -374,9 +374,9 @@ export function PageHero({
         <p className="kicker">{kicker}</p>
         <h1 className="mt-5 font-medium text-display tracking-tight">{title}</h1>
         {children ? (
-          <div className="mt-5 max-w-xl text-sm leading-relaxed text-muted md:text-base">
+          <p className="page-hero-lead mt-5 max-w-xl text-sm leading-relaxed text-muted md:text-base">
             {children}
-          </div>
+          </p>
         ) : null}
       </div>
     </header>
