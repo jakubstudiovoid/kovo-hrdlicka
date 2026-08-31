@@ -196,7 +196,7 @@ function ServicesPreview() {
         <Reveal>
           <p className="kicker">Služby</p>
           <h2 className="mt-4 font-medium text-4xl tracking-tight">
-            Obory výroby
+            Co vyrábíme
           </h2>
         </Reveal>
         <ul className="mt-12 divide-y divide-line border-y border-line">
