@@ -62,46 +62,6 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="border-b border-line">
-        <div className="page-grid py-16 md:py-24">
-          <Reveal>
-            <p className="kicker">Materiály</p>
-            <h2 className="mt-4 font-medium text-3xl tracking-tight">
-              Povrchové úpravy
-            </h2>
-          </Reveal>
-          <div className="mt-10 grid border-b border-line sm:grid-cols-3">
-            {[
-              {
-                t: "Zinek",
-                d: "Žárový zinek na venkovní konstrukce, brány a schodiště v terénu. Odolný vůči počasí.",
-              },
-              {
-                t: "Lak",
-                d: "Černý mat do interiéru a ke dřevu. Pro konstrukce, které mají ustoupit stupňům nebo výhledu.",
-              },
-              {
-                t: "Kombinace",
-                d: "Dřevo na oceli, tahokov, pororošt, nerezová lanka. Spoje podle funkce konstrukce.",
-              },
-            ].map((b, i) => (
-              <Reveal
-                key={b.t}
-                delay={i * 80}
-                className={
-                  i < 2 ? "border-t border-line sm:border-r" : "border-t border-line"
-                }
-              >
-                <article className="p-6 md:p-7">
-                  <h3 className="font-medium text-xl tracking-tight">{b.t}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{b.d}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section>
         <div className="page-grid py-16 md:py-20">
           <Reveal>

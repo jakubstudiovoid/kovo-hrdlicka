@@ -121,3 +121,36 @@ export const materials = [
   "Dřevo + ocel",
   "Nerezová lanka",
 ];
+
+export const finishes = [
+  {
+    number: "01",
+    title: "Žárový zinek",
+    text: "Venkovní konstrukce, brány a schodiště v terénu. Odolnost vůči počasí bez dalšího nátěru.",
+  },
+  {
+    number: "02",
+    title: "Práškový lak",
+    text: "Komaxit v požadovaném odstínu. Rovnoměrný povrch pro interiér i exteriér.",
+  },
+  {
+    number: "03",
+    title: "Černý mat",
+    text: "Mokré lakování do interiéru a ke dřevu. Pro konstrukce, které mají ustoupit stupňům nebo výhledu.",
+  },
+  {
+    number: "04",
+    title: "Duplex",
+    text: "Žárový zinek a lak. Nejvyšší ochrana venkovních konstrukcí v terénu a u komunikací.",
+  },
+  {
+    number: "05",
+    title: "Nerez",
+    text: "Madla, lanka a detaily bez nátěru. Spoje s lakovanou nebo zinkovanou ocelí.",
+  },
+  {
+    number: "06",
+    title: "Kombinace",
+    text: "Dřevo na oceli, tahokov, pororošt. Povrch a spoje podle funkce konstrukce.",
+  },
+];

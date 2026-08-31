@@ -4,14 +4,15 @@ import { PageHero } from "@/components/home-page";
 import { Reveal } from "@/components/reveal";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
-import { services } from "@/data/services";
+import { finishes, services } from "@/data/services";
 import { seoHead } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/sluzby")({
   head: () =>
     seoHead(
       "Služby",
-      "Schodiště, zábradlí, brány, terasy, přístřešky a kovový nábytek. Návrh, výroba a montáž. HRDL, Nová Ves nad Nisou.",
+      "Schodiště, zábradlí, brány, terasy, přístřešky a kovový nábytek. Návrh, výroba a montáž. Povrchové úpravy zinek, lak, duplex a nerez. Nová Ves nad Nisou.",
     ),
   component: SluzbyPage,
 });
@@ -21,8 +22,8 @@ function SluzbyPage() {
     <SiteShell>
       <PageHero kicker="Nabídka" title="Služby">
         Zakázková kovovýroba — schodiště, zábradlí, brány, terasy, přístřešky a
-        nábytek. Návrh, výroba a montáž. Povrchové úpravy zinek, lak
-        a nerez.
+        nábytek. Návrh, výroba a montáž. Povrchové úpravy žárový zinek,
+        práškový lak, duplex a nerez.
       </PageHero>
 
       <div>
@@ -59,6 +60,39 @@ function SluzbyPage() {
           </section>
         ))}
       </div>
+
+      <section className="border-b border-line">
+        <div className="page-grid py-16 md:py-24">
+          <Reveal>
+            <p className="kicker">Materiály</p>
+            <h2 className="mt-4 font-medium text-4xl tracking-tight">
+              Povrchové úpravy
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted md:text-base">
+              Povrch se volí podle místa, zátěže a požadované životnosti.
+              Úprava je součástí návrhu zakázky.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid sm:grid-cols-2">
+            {finishes.map((f, i) => (
+              <Reveal
+                key={f.title}
+                delay={(i % 2) * 60}
+                className={cn(
+                  "border-t border-line py-8",
+                  i % 2 === 0 ? "sm:pr-10" : "sm:pl-10",
+                )}
+              >
+                <p className="text-xs tracking-[0.2em] text-subtle">{f.number}</p>
+                <h3 className="mt-3 font-medium text-xl tracking-tight md:text-2xl">
+                  {f.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">{f.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section>
         <div className="page-grid py-16 md:py-20">
