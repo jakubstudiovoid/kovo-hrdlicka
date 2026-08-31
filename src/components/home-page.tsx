@@ -271,21 +271,9 @@ function Process() {
 function AboutTeaser() {
   return (
     <section className="about-portrait border-b border-line">
-      <img
-        src="/hero/pavel.webp"
-        srcSet="/hero/pavel-900.webp 900w, /hero/pavel-1600.webp 1600w, /hero/pavel.webp 3168w"
-        sizes="100vw"
-        width={3168}
-        height={1344}
-        alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
-        loading="lazy"
-        decoding="async"
-        className="about-portrait-img"
-      />
-      <div className="about-portrait-fade" aria-hidden="true" />
-      <div className="relative z-10 flex min-h-[34rem] items-end md:min-h-[28rem] md:items-center">
-        <div className="page-grid w-full py-16 md:py-28">
-          <Reveal className="max-w-md md:ml-auto">
+      <div className="page-grid py-16 md:py-24">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+          <Reveal>
             <p className="kicker">O firmě</p>
             <h2 className="mt-5 font-medium text-display tracking-tight">
               {site.brand}
@@ -304,6 +292,20 @@ function AboutTeaser() {
               Více o firmě
               <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
             </Link>
+          </Reveal>
+          <Reveal delay={80} className="relative">
+            <img
+              src="/hero/pavel-portrait.webp"
+              srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
+              sizes="(min-width: 768px) 32rem, 100vw"
+              width={1680}
+              height={1344}
+              alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
+              loading="lazy"
+              decoding="async"
+              className="about-portrait-img"
+            />
+            <div className="about-portrait-fade" aria-hidden="true" />
           </Reveal>
         </div>
       </div>
