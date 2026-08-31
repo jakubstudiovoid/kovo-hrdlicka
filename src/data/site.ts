@@ -32,5 +32,7 @@ export const nav = [
 ];
 
 export function pageTitle(title?: string) {
-  return title ? `${title} — ${site.name}` : `${site.name} — ${site.tagline}`;
+  return title
+    ? `${title} — ${site.brand}`
+    : "Kovovýroba Hrdlička - zakázková kovovýroba";
 }

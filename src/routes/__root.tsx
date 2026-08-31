@@ -8,7 +8,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { JsonLd } from "@/components/json-ld";
 import { NotFound } from "@/components/not-found";
-import { site } from "@/data/site";
+import { pageTitle, site } from "@/data/site";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -16,7 +16,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${site.name} — ${site.tagline}` },
+      { title: pageTitle() },
       { name: "description", content: site.description },
       { name: "theme-color", content: "#0c0c0c" },
       { name: "format-detection", content: "telephone=yes" },
