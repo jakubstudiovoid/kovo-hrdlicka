@@ -76,6 +76,17 @@ export function Footer() {
             © {new Date().getFullYear()} {site.legalName} · IČO {site.ico}
           </p>
           <p>
+            Vytvořilo{" "}
+            <a
+              href="https://studiovoid.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors duration-200 hover:text-fg"
+            >
+              studiovoid.cz
+            </a>
+          </p>
+          <p>
             <Link to="/soukromi" className="hover:text-muted">
               Ochrana soukromí
             </Link>

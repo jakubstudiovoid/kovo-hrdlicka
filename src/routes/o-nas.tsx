@@ -70,7 +70,7 @@ function AboutPage() {
               Povrchové úpravy
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-px bg-line sm:grid-cols-3">
+          <div className="mt-10 grid border-b border-line sm:grid-cols-3">
             {[
               {
                 t: "Zinek",
@@ -85,8 +85,14 @@ function AboutPage() {
                 d: "Dřevo na oceli, tahokov, pororošt, nerezová lanka. Spoje podle funkce konstrukce.",
               },
             ].map((b, i) => (
-              <Reveal key={b.t} delay={i * 80}>
-                <article className="bg-bg p-6 md:p-7">
+              <Reveal
+                key={b.t}
+                delay={i * 80}
+                className={
+                  i < 2 ? "border-t border-line sm:border-r" : "border-t border-line"
+                }
+              >
+                <article className="p-6 md:p-7">
                   <h3 className="font-medium text-xl tracking-tight">{b.t}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{b.d}</p>
                 </article>

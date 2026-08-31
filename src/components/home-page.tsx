@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
+import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { materials, processSteps, services } from "@/data/services";
@@ -9,8 +10,8 @@ import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 const featured = projects[0];
-
-const imgSizes = "(min-width: 768px) 704px, 100vw";
+const homeProjects = projects.slice(1, 7);
+const imgSizes = "(min-width: 1120px) 1040px, 100vw";
 
 export function HomePage() {
   return (
@@ -75,13 +76,13 @@ function Hero() {
             >
               <img
                 src={featured.cover.src}
-                srcSet="/realizace/schodiste-800.webp 800w, /realizace/schodiste-1200.webp 1200w, /realizace/schodiste-full.webp 1536w"
+                srcSet={featured.cover.srcSet}
                 sizes={imgSizes}
                 width={featured.cover.width}
                 height={featured.cover.height}
                 alt={featured.cover.alt}
                 fetchPriority="high"
-                className="hero-photo img-frame aspect-4/5 w-full object-cover object-[58%_42%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02]"
+                className="hero-photo img-frame aspect-4/5 w-full object-cover object-[58%_42%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] md:aspect-4/3"
               />
             </Link>
             <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase">
@@ -125,12 +126,12 @@ function Intro() {
           </h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="mt-8 text-base leading-relaxed text-fg/90 md:text-lg">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-fg/90 md:text-lg">
             {site.brand} vyrábí zakázkové ocelové konstrukce v&nbsp;Nové Vsi nad
             Nisou. Zakázku zajišťujeme kompletně — zaměření na stavbě, návrh,
             výroba a montáž.
           </p>
-          <p className="mt-5 text-sm leading-relaxed text-muted">
+          <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted">
             Schodiště, zábradlí, brány, terasy, přístřešky a atypické konstrukce.
             Povrchové úpravy: žárový zinek, černý lak, nerez. Kombinace oceli
             a&nbsp;dřeva.
@@ -142,11 +143,11 @@ function Intro() {
 }
 
 function Featured() {
-  if (!featured) return null;
+  if (!homeProjects.length) return null;
   return (
     <section className="border-b border-line">
       <div className="page-grid py-16 md:py-20">
-        <div className="mb-8 flex items-end justify-between gap-6">
+        <div className="mb-10 flex items-end justify-between gap-6">
           <Reveal>
             <p className="kicker">Portfolio</p>
             <h2 className="mt-4 font-medium text-4xl tracking-tight">
@@ -164,30 +165,11 @@ function Featured() {
           </Reveal>
         </div>
 
-        <Reveal>
-          <Link
-            to="/realizace/$slug"
-            params={{ slug: featured.slug }}
-            className="group block border-t border-line pt-8"
-          >
-            <p className="text-xs tracking-[0.2em] text-subtle uppercase">
-              {featured.year} — {featured.category}
-            </p>
-            <h3 className="mt-3 font-medium text-3xl tracking-tight">
-              {featured.title}
-            </h3>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
-              {featured.excerpt}
-            </p>
-            <span className="mt-6 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase">
-              Detail realizace
-              <ArrowUpRight
-                className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                strokeWidth={1.75}
-              />
-            </span>
-          </Link>
-        </Reveal>
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
+          {homeProjects.map((project, i) => (
+            <ProjectCard key={project.slug} project={project} delay={i * 50} />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -249,10 +231,18 @@ function Process() {
             Průběh zakázky
           </h2>
         </Reveal>
-        <ol className="mt-12 grid gap-px bg-line sm:grid-cols-2">
+        <ol className="mt-12 grid border-b border-line sm:grid-cols-2">
           {processSteps.map((step, i) => (
-            <Reveal key={step.number} as="li" delay={i * 80}>
-              <article className="flex h-full flex-col bg-bg p-6 md:p-8">
+            <Reveal
+              key={step.number}
+              as="li"
+              delay={i * 80}
+              className={cn(
+                "border-t border-line",
+                i % 2 === 0 && "sm:border-r",
+              )}
+            >
+              <article className="flex h-full flex-col p-6 md:p-8">
                 <span className="text-xs tracking-[0.2em] text-subtle">
                   {step.number}
                 </span>
@@ -285,7 +275,7 @@ function AboutTeaser() {
           </p>
         </Reveal>
         <Reveal delay={80}>
-          <p className="mt-8 text-base leading-relaxed text-muted">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted">
             Zakázkovou kovovýrobu vedeme jako specializovanou dílnu. Kontakt,
             návrh i montáž probíhá přímo s&nbsp;výrobcem, bez zprostředkovatele.
           </p>
