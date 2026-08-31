@@ -249,7 +249,7 @@ function Process() {
               key={step.number}
               as="li"
               delay={i * 80}
-              className="flex-1 border-l border-line py-7 pl-6 first:pt-0 last:pb-0 sm:border-l-0 sm:border-t sm:py-0 sm:pl-0 sm:pr-8 sm:pt-7 last:sm:pr-0"
+              className="flex-1 border-l border-line py-7 pl-6 first:pt-0 last:pb-0 sm:border-l-0 sm:border-t sm:py-0 sm:pl-0 sm:pr-8 sm:pt-7 sm:first:pt-7 last:sm:pr-0"
             >
               <span className="text-xs tracking-[0.2em] text-subtle">
                 {step.number}
