@@ -9,9 +9,17 @@ import { projects } from "@/data/projects";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const featured = projects[0];
-const homeProjects = projects.slice(1, 7);
+const homeProjects = projects.slice(0, 6);
 const imgSizes = "(min-width: 1120px) 1040px, 100vw";
+
+const heroPhoto = {
+  src: "/hero/cedule.webp",
+  srcSet:
+    "/hero/cedule-800.webp 800w, /hero/cedule-1400.webp 1400w, /hero/cedule.webp 1920w",
+  width: 1920,
+  height: 1011,
+  alt: "Cedule Kovovýroba Hrdlička na ocelovém plotě. Nová Ves nad Nisou.",
+};
 
 export function HomePage() {
   return (
@@ -66,36 +74,28 @@ function Hero() {
         </div>
       </div>
 
-      {featured ? (
-        <div className="page-grid pb-16 md:pb-20">
-          <figure className="group">
-            <Link
-              to="/realizace/$slug"
-              params={{ slug: featured.slug }}
-              className="block overflow-hidden"
-            >
-              <span className="hero-photo">
-                <img
-                  src={featured.cover.src}
-                  srcSet={featured.cover.srcSet}
-                  sizes={imgSizes}
-                  width={featured.cover.width}
-                  height={featured.cover.height}
-                  alt={featured.cover.alt}
-                  fetchPriority="high"
-                  className="img-frame img-zoom aspect-4/5 w-full object-cover object-[58%_42%] md:aspect-4/3"
-                />
-              </span>
-            </Link>
-            <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase transition-colors duration-500 group-hover:text-muted">
-              <span>
-                01 — {featured.category}
-              </span>
-              <span>{featured.year}</span>
-            </figcaption>
-          </figure>
-        </div>
-      ) : null}
+      <div className="page-grid pb-16 md:pb-20">
+        <figure className="group">
+          <div className="overflow-hidden">
+            <span className="hero-photo">
+              <img
+                src={heroPhoto.src}
+                srcSet={heroPhoto.srcSet}
+                sizes={imgSizes}
+                width={heroPhoto.width}
+                height={heroPhoto.height}
+                alt={heroPhoto.alt}
+                fetchPriority="high"
+                className="img-frame img-zoom aspect-3/2 w-full object-cover object-[42%_center] md:aspect-video"
+              />
+            </span>
+          </div>
+          <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase transition-colors duration-500 group-hover:text-muted">
+            <span>Kovovýroba</span>
+            <span>{site.address.city}</span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
   );
 }
