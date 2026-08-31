@@ -151,29 +151,28 @@ function Featured() {
   return (
     <section className="border-b border-line">
       <div className="page-grid py-16 md:py-20">
-        <div className="mb-10 flex items-end justify-between gap-6">
-          <Reveal>
-            <p className="kicker">Portfolio</p>
-            <h2 className="mt-4 font-medium text-4xl tracking-tight">
-              Realizace
-            </h2>
-          </Reveal>
-          <Reveal delay={80}>
-            <Link
-              to="/realizace"
-              className="hidden items-center gap-1.5 text-xs tracking-[0.16em] text-muted uppercase transition-colors duration-200 hover:text-fg sm:inline-flex"
-            >
-              Přehled
-              <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
-            </Link>
-          </Reveal>
-        </div>
+        <Reveal>
+          <p className="kicker">Portfolio</p>
+          <h2 className="mt-4 font-medium text-4xl tracking-tight">
+            Vybrané realizace
+          </h2>
+        </Reveal>
 
-        <div className="grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
+        <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
           {homeProjects.map((project, i) => (
             <ProjectCard key={project.slug} project={project} delay={i * 50} />
           ))}
         </div>
+
+        <Reveal delay={80}>
+          <Link
+            to="/realizace"
+            className="mt-12 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
+          >
+            Kompletní portfolio
+            <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
@@ -181,17 +180,15 @@ function Featured() {
 
 function ServicesPreview() {
   return (
-    <section className="bg-paper text-ink">
+    <section className="border-b border-line">
       <div className="page-grid py-20 md:py-28">
         <Reveal>
-          <p className="text-xs tracking-[0.22em] text-ink-muted uppercase">
-            Služby
-          </p>
+          <p className="kicker">Služby</p>
           <h2 className="mt-4 font-medium text-4xl tracking-tight">
             Obory výroby
           </h2>
         </Reveal>
-        <ul className="mt-12 divide-y divide-ink/10 border-y border-ink/10">
+        <ul className="mt-12 divide-y divide-line border-y border-line">
           {services.map((s, i) => (
             <Reveal key={s.slug} as="li" delay={i * 40}>
               <Link
@@ -199,20 +196,20 @@ function ServicesPreview() {
                 hash={s.slug}
                 className="group grid grid-cols-12 items-baseline gap-x-3 gap-y-1 py-6 md:py-7"
               >
-                <span className="col-span-2 text-xs tracking-[0.18em] text-ink-muted">
+                <span className="col-span-2 text-xs tracking-[0.18em] text-subtle">
                   {s.number}
                 </span>
                 <span className="col-span-9">
                   <span className="block font-medium text-xl tracking-tight md:text-2xl">
                     {s.title}
                   </span>
-                  <span className="mt-1 block text-sm leading-relaxed text-ink-muted">
+                  <span className="mt-1 block text-sm leading-relaxed text-muted">
                     {s.lead}
                   </span>
                 </span>
                 <span className="col-span-1 hidden self-center justify-end sm:flex">
                   <ArrowUpRight
-                    className="size-4 text-ink/30 transition-[color,transform] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-ink"
+                    className="size-4 text-subtle transition-[color,transform] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-fg"
                     strokeWidth={1.5}
                   />
                 </span>
