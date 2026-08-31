@@ -270,30 +270,42 @@ function Process() {
 
 function AboutTeaser() {
   return (
-    <section className="border-b border-line">
-      <div className="page-grid py-20 md:py-28">
-        <Reveal>
-          <p className="kicker">O firmě</p>
-          <h2 className="mt-5 font-medium text-display tracking-tight">
-            {site.legalName}
-          </h2>
-          <p className="mt-2 text-sm tracking-[0.16em] text-muted uppercase">
-            {site.brand} · IČO {site.ico}
-          </p>
-        </Reveal>
-        <Reveal delay={80}>
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted">
-            Zakázkovou kovovýrobu vedeme jako specializovanou dílnu. Kontakt,
-            návrh i montáž probíhá přímo s&nbsp;výrobcem, bez zprostředkovatele.
-          </p>
-          <Link
-            to="/o-nas"
-            className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
-          >
-            Více o firmě
-            <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
-          </Link>
-        </Reveal>
+    <section className="about-portrait border-b border-line">
+      <img
+        src="/hero/pavel.webp"
+        srcSet="/hero/pavel-900.webp 900w, /hero/pavel-1600.webp 1600w, /hero/pavel.webp 3168w"
+        sizes="100vw"
+        width={3168}
+        height={1344}
+        alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
+        loading="lazy"
+        decoding="async"
+        className="about-portrait-img"
+      />
+      <div className="about-portrait-fade" aria-hidden="true" />
+      <div className="relative z-10 flex min-h-[34rem] items-end md:min-h-[28rem] md:items-center">
+        <div className="page-grid w-full py-16 md:py-28">
+          <Reveal className="max-w-md md:ml-auto">
+            <p className="kicker">O firmě</p>
+            <h2 className="mt-5 font-medium text-display tracking-tight">
+              {site.brand}
+            </h2>
+            <p className="mt-2 text-sm tracking-[0.16em] text-muted uppercase">
+              {site.legalName} · IČO {site.ico}
+            </p>
+            <p className="mt-8 text-base leading-relaxed text-muted">
+              Zakázkovou kovovýrobu vedeme jako specializovanou dílnu. Kontakt,
+              návrh i montáž probíhá přímo s&nbsp;výrobcem, bez zprostředkovatele.
+            </p>
+            <Link
+              to="/o-nas"
+              className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
+            >
+              Více o firmě
+              <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
+            </Link>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
