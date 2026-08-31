@@ -243,28 +243,23 @@ function Process() {
             Průběh zakázky
           </h2>
         </Reveal>
-        <ol className="mt-12 grid border-b border-line sm:grid-cols-2">
+        <ol className="mt-14 flex flex-col sm:flex-row">
           {processSteps.map((step, i) => (
             <Reveal
               key={step.number}
               as="li"
               delay={i * 80}
-              className={cn(
-                "border-t border-line",
-                i % 2 === 0 && "sm:border-r",
-              )}
+              className="flex-1 border-l border-line py-7 pl-6 first:pt-0 last:pb-0 sm:border-l-0 sm:border-t sm:py-0 sm:pl-0 sm:pr-8 sm:pt-7 last:sm:pr-0"
             >
-              <article className="flex h-full flex-col p-6 md:p-8">
-                <span className="text-xs tracking-[0.2em] text-subtle">
-                  {step.number}
-                </span>
-                <h3 className="mt-8 font-medium text-2xl tracking-tight">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {step.text}
-                </p>
-              </article>
+              <span className="text-xs tracking-[0.2em] text-subtle">
+                {step.number}
+              </span>
+              <h3 className="mt-4 font-medium text-xl tracking-tight md:text-2xl">
+                {step.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                {step.text}
+              </p>
             </Reveal>
           ))}
         </ol>
