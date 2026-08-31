@@ -17,8 +17,8 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Materials />
       <Intro />
+      <Materials />
       <Featured />
       <ServicesPreview />
       <Process />
@@ -67,7 +67,7 @@ function Hero() {
       </div>
 
       {featured ? (
-        <div className="page-grid pb-16 md:pb-20">
+        <div className="page-grid pb-20 md:pb-28">
           <figure>
             <Link
               to="/realizace/$slug"
@@ -100,18 +100,40 @@ function Hero() {
 
 function Materials() {
   return (
-    <div className="border-y border-line" aria-hidden="true">
-      <div className="page-grid flex flex-wrap gap-x-5 gap-y-2 py-4">
-        {materials.map((item) => (
-          <span
-            key={item}
-            className="text-xs tracking-[0.2em] text-muted uppercase"
-          >
-            {item}
-          </span>
-        ))}
+    <section className="border-b border-line">
+      <div className="page-grid py-20 md:py-28">
+        <Reveal>
+          <p className="kicker">Materiály</p>
+          <h2 className="mt-4 font-medium text-4xl tracking-tight">
+            Materiály a povrchy
+          </h2>
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted md:text-base">
+            Konstrukce z oceli a nerezu. Povrchová úprava podle místa použití —
+            žárový zinek, lak, nebo kombinace se dřevem.
+          </p>
+        </Reveal>
+        <ul className="mt-12 grid border-b border-line sm:grid-cols-2">
+          {materials.map((item, i) => (
+            <Reveal
+              key={item.name}
+              as="li"
+              delay={i * 40}
+              className={cn(
+                "border-t border-line",
+                i % 2 === 0 && "sm:border-r",
+              )}
+            >
+              <article className="px-0 py-6 sm:p-7">
+                <h3 className="font-medium text-xl tracking-tight">{item.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {item.note}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </ul>
       </div>
-    </div>
+    </section>
   );
 }
 
