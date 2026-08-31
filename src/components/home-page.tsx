@@ -68,24 +68,26 @@ function Hero() {
 
       {featured ? (
         <div className="page-grid pb-16 md:pb-20">
-          <figure>
+          <figure className="group">
             <Link
               to="/realizace/$slug"
               params={{ slug: featured.slug }}
-              className="block"
+              className="block overflow-hidden"
             >
-              <img
-                src={featured.cover.src}
-                srcSet={featured.cover.srcSet}
-                sizes={imgSizes}
-                width={featured.cover.width}
-                height={featured.cover.height}
-                alt={featured.cover.alt}
-                fetchPriority="high"
-                className="hero-photo img-frame aspect-4/5 w-full object-cover object-[58%_42%] md:aspect-4/3"
-              />
+              <span className="hero-photo">
+                <img
+                  src={featured.cover.src}
+                  srcSet={featured.cover.srcSet}
+                  sizes={imgSizes}
+                  width={featured.cover.width}
+                  height={featured.cover.height}
+                  alt={featured.cover.alt}
+                  fetchPriority="high"
+                  className="img-frame img-zoom aspect-4/5 w-full object-cover object-[58%_42%] md:aspect-4/3"
+                />
+              </span>
             </Link>
-            <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase">
+            <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase transition-colors duration-500 group-hover:text-muted">
               <span>
                 01 — {featured.category}
               </span>

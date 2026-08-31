@@ -150,6 +150,7 @@
   }
 
   .hero-photo {
+    display: block;
     animation: hero-zoom 1.4s var(--ease-out-expo) both;
   }
 
@@ -160,6 +161,14 @@
   .img-frame {
     outline: 1px solid rgb(243 241 236 / 0.1);
     outline-offset: -1px;
+  }
+
+  .img-zoom {
+    transition: transform 2.4s var(--ease-out-expo);
+  }
+
+  .group:hover .img-zoom {
+    transform: scale(1.02);
   }
 
   .marquee {
@@ -319,6 +328,12 @@
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
+  }
+
+  .img-zoom,
+  .group:hover .img-zoom {
+    transition: none;
+    transform: none;
   }
 
   .marquee-track {

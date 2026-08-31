@@ -10,7 +10,7 @@ type LogoProps = {
 
 export function Logo({ className, variant = "white", onClick }: LogoProps) {
   const src =
-    variant === "white" ? "/brand/logo-white-sm.png" : "/brand/logo-black-sm.png";
+    variant === "white" ? "/brand/mark-white-sm.png" : "/brand/mark-black-sm.png";
   return (
     <Link
       to="/"
@@ -21,8 +21,8 @@ export function Logo({ className, variant = "white", onClick }: LogoProps) {
       <img
         src={src}
         alt=""
-        width={180}
-        height={159}
+        width={240}
+        height={213}
         className="h-8 w-auto select-none"
       />
       <span className="flex flex-col justify-center leading-none">
