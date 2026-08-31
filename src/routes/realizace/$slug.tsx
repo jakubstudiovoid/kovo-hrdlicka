@@ -161,6 +161,13 @@ function ProjectPage() {
                 </li>
               ))}
             </ul>
+            <Link
+              to="/realizace"
+              className="mt-10 inline-flex items-center gap-2 text-xs tracking-[0.16em] text-muted uppercase transition-colors duration-200 hover:text-fg"
+            >
+              <ArrowLeft className="size-3.5" strokeWidth={1.75} />
+              Zpět na všechny realizace
+            </Link>
           </div>
         </section>
       </article>
