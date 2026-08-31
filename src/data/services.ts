@@ -112,36 +112,12 @@ export const processSteps = [
 ];
 
 export const materials = [
-  {
-    name: "Ocel",
-    note: "Konstrukční profily, plech a svařované rámy.",
-  },
-  {
-    name: "Nerez",
-    note: "Madla, detaily a prvky v exteriéru.",
-  },
-  {
-    name: "Žárový zinek",
-    note: "Povrchová úprava pro venkovní konstrukce.",
-  },
-  {
-    name: "Černý lak",
-    note: "Interiér a kombinace se dřevem.",
-  },
-  {
-    name: "Tahokov",
-    note: "Brány, výplně a přístřešky.",
-  },
-  {
-    name: "Pororošt",
-    note: "Plošiny, stupně a lávky.",
-  },
-  {
-    name: "Dřevo + ocel",
-    note: "Schodiště, brány a atypický nábytek.",
-  },
-  {
-    name: "Nerezová lanka",
-    note: "Zábradlí teras, galerií a schodišť.",
-  },
-] as const;
+  "Ocel",
+  "Nerez",
+  "Žárový zinek",
+  "Černý lak",
+  "Tahokov",
+  "Pororošt",
+  "Dřevo + ocel",
+  "Nerezová lanka",
+];

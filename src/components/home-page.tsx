@@ -17,8 +17,8 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Intro />
       <Materials />
+      <Intro />
       <Featured />
       <ServicesPreview />
       <Process />
@@ -67,7 +67,7 @@ function Hero() {
       </div>
 
       {featured ? (
-        <div className="page-grid pb-20 md:pb-28">
+        <div className="page-grid pb-16 md:pb-20">
           <figure>
             <Link
               to="/realizace/$slug"
@@ -99,41 +99,23 @@ function Hero() {
 }
 
 function Materials() {
+  const half = [...materials, ...materials];
+  const loop = [...half, ...half];
+
   return (
-    <section className="border-b border-line">
-      <div className="page-grid py-20 md:py-28">
-        <Reveal>
-          <p className="kicker">Materiály</p>
-          <h2 className="mt-4 font-medium text-4xl tracking-tight">
-            Materiály a povrchy
-          </h2>
-          <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted md:text-base">
-            Konstrukce z oceli a nerezu. Povrchová úprava podle místa použití —
-            žárový zinek, lak, nebo kombinace se dřevem.
-          </p>
-        </Reveal>
-        <ul className="mt-12 grid border-b border-line sm:grid-cols-2">
-          {materials.map((item, i) => (
-            <Reveal
-              key={item.name}
-              as="li"
-              delay={i * 40}
-              className={cn(
-                "border-t border-line",
-                i % 2 === 0 && "sm:border-r",
-              )}
-            >
-              <article className="px-0 py-6 sm:p-7">
-                <h3 className="font-medium text-xl tracking-tight">{item.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {item.note}
-                </p>
-              </article>
-            </Reveal>
+    <div className="border-y border-line">
+      <p className="sr-only">Materiály: {materials.join(", ")}.</p>
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {loop.map((item, i) => (
+            <span key={`${item}-${i}`} className="marquee-item">
+              <span>{item}</span>
+              <span className="marquee-sep" />
+            </span>
           ))}
-        </ul>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 
