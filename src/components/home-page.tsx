@@ -5,11 +5,21 @@ import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { materials, processSteps, services } from "@/data/services";
-import { projects } from "@/data/projects";
+import { getProject } from "@/data/projects";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const homeProjects = projects.slice(0, 6);
+const homeProjects = [
+  "schodiste-a-zabradi",
+  "terasa-a-schodiste",
+  "pristresek",
+  "vstupni-plosina",
+  "brana-tahokov",
+  "brana-drevo",
+].flatMap((slug) => {
+  const project = getProject(slug);
+  return project ? [project] : [];
+});
 const imgSizes = "(min-width: 1120px) 1040px, 100vw";
 
 const heroPhoto = {
