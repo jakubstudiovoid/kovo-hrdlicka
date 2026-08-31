@@ -31,7 +31,7 @@ export function ProjectCard({
             alt={project.cover.alt}
             loading="lazy"
             decoding="async"
-            className="img-frame aspect-4/5 w-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+            className="img-frame aspect-4/5 w-full object-cover object-center"
           />
         </div>
         <p className="mt-4 text-xs tracking-[0.2em] text-subtle uppercase">

@@ -72,7 +72,7 @@ function Hero() {
             <Link
               to="/realizace/$slug"
               params={{ slug: featured.slug }}
-              className="group block"
+              className="block"
             >
               <img
                 src={featured.cover.src}
@@ -82,7 +82,7 @@ function Hero() {
                 height={featured.cover.height}
                 alt={featured.cover.alt}
                 fetchPriority="high"
-                className="hero-photo img-frame aspect-4/5 w-full object-cover object-[58%_42%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] md:aspect-4/3"
+                className="hero-photo img-frame aspect-4/5 w-full object-cover object-[58%_42%] md:aspect-4/3"
               />
             </Link>
             <figcaption className="mt-3 flex items-center justify-between gap-4 text-xs tracking-[0.18em] text-subtle uppercase">

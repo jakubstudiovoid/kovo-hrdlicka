@@ -16,12 +16,22 @@ export function Logo({ className, variant = "white", onClick }: LogoProps) {
       to="/"
       onClick={onClick}
       aria-label={`${site.name} — úvod`}
-      className={cn("brand-lockup", className)}
+      className={cn("inline-flex items-center gap-2.5", className)}
     >
-      <img src={src} alt="" width={180} height={159} />
-      <span className="brand-wordmark">
-        <span>Kovovýroba</span>
-        <span>Hrdlička</span>
+      <img
+        src={src}
+        alt=""
+        width={180}
+        height={159}
+        className="h-8 w-auto select-none"
+      />
+      <span className="flex flex-col justify-center leading-none">
+        <span className="text-2xs font-medium tracking-tight text-muted">
+          Kovovýroba
+        </span>
+        <span className="mt-0.5 text-lg font-medium tracking-tight">
+          Hrdlička
+        </span>
       </span>
     </Link>
   );
