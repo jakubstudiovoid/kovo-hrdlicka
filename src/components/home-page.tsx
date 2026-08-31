@@ -199,7 +199,7 @@ function ServicesPreview() {
             Co vyrábíme
           </h2>
         </Reveal>
-        <ul className="mt-12 divide-y divide-line border-y border-line">
+        <ul className="mt-12 divide-y divide-line">
           {services.map((s, i) => (
             <Reveal key={s.slug} as="li" delay={i * 40}>
               <Link
