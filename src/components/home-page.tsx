@@ -150,7 +150,9 @@ function Intro() {
           </p>
           <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted">
             Schodiště, zábradlí, brány, terasy, přístřešky, nábytek a atypické
-            konstrukce. Vše vyrábíme pečlivě a na zakázku.
+            konstrukce.
+            <br />
+            Vše vyrábíme pečlivě a na zakázku.
           </p>
         </Reveal>
       </div>
