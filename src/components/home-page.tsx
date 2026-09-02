@@ -149,9 +149,8 @@ function Intro() {
             výroba a montáž.
           </p>
           <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted">
-            Schodiště, zábradlí, brány, terasy, přístřešky a atypické konstrukce.
-            Povrchové úpravy: žárový zinek, černý lak, nerez. Kombinace oceli
-            a&nbsp;dřeva.
+            Schodiště, zábradlí, brány, terasy, přístřešky, nábytek a atypické
+            konstrukce. Vše vyrábíme pečlivě a na zakázku.
           </p>
         </Reveal>
       </div>
