@@ -65,8 +65,9 @@ function Hero() {
           className="hero-fade page-hero-lead mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base"
           style={{ animationDelay: "0.35s" }}
         >
-          Schodiště, zábradlí, brány a ocelové konstrukce. Návrh, výroba
-          a&nbsp;montáž.
+          Schodiště, zábradlí, brány a ocelové konstrukce.
+          <br />
+          Návrh, výroba a&nbsp;montáž.
         </p>
         <div
           className="hero-fade mt-9 flex flex-wrap items-center gap-3"
