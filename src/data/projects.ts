@@ -36,6 +36,27 @@ function photo(
 
 export const projects: Project[] = [
   {
+    slug: "zabradi-geometrie",
+    title: "Zábradlí s geometrickou výplní",
+    location: "Rodinný dům",
+    year: "2026",
+    category: "Zábradlí",
+    excerpt:
+      "Interiérové zábradlí kolem schodišťové šachty. Černá ocel, geometrická výplň z prutů.",
+    body: [
+      "Zábradlí obepíná schodišťovou šachtu v rodinném domě. Ocelový rám s výplní z prutů v nepravidelném geometrickém rastru. Povrch černý lak.",
+      "Madlo, sloupky a výplň jsou řešeny jako jeden celek. Kotvení do podlahy a do stěn podle zaměření na stavbě.",
+    ],
+    materials: ["Ocel", "Černý lak", "Geometrická výplň"],
+    cover: photo(
+      "zabradi-geometrie",
+      1400,
+      1992,
+      "Pohled zdola na černé ocelové zábradlí s geometrickou výplní kolem schodišťové šachty",
+    ),
+    gallery: [],
+  },
+  {
     slug: "schodiste-a-zabradi",
     title: "Schodiště a zábradlí",
     location: "Rodinný dům",

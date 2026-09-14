@@ -10,12 +10,12 @@ import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 const homeProjects = [
+  "zabradi-geometrie",
   "schodiste-a-zabradi",
   "terasa-a-schodiste",
   "pristresek",
   "vstupni-plosina",
   "brana-tahokov",
-  "brana-drevo",
 ].flatMap((slug) => {
   const project = getProject(slug);
   return project ? [project] : [];
