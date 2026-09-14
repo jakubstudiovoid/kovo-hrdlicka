@@ -51,10 +51,19 @@ export const projects: Project[] = [
     cover: photo(
       "zabradi-geometrie",
       1400,
-      1992,
-      "Pohled zdola na černé ocelové zábradlí s geometrickou výplní kolem schodišťové šachty",
+      942,
+      "Pohled shora na černé ocelové zábradlí s geometrickou výplní kolem schodišťové šachty",
     ),
-    gallery: [],
+    gallery: [
+      {
+        src: "/realizace/zabradi-geometrie-zdola.webp",
+        srcSet:
+          "/realizace/zabradi-geometrie-zdola-800.webp 800w, /realizace/zabradi-geometrie-zdola.webp 1400w",
+        width: 1400,
+        height: 1992,
+        alt: "Pohled zdola na černé ocelové zábradlí s geometrickou výplní",
+      },
+    ],
   },
   {
     slug: "schodiste-a-zabradi",
