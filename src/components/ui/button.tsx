@@ -9,13 +9,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid:
-          "bg-fg text-bg hover:bg-steel hover:text-ink outline-fg",
+          "border border-border bg-transparent text-fg hover:border-fg outline-fg",
         outline:
-          "border border-border bg-transparent text-fg hover:border-fg hover:bg-fg hover:text-bg outline-fg",
+          "border border-border bg-transparent text-fg hover:border-fg outline-fg",
         ghost: "text-fg hover:text-steel outline-fg",
-        ink: "bg-ink text-paper hover:bg-ink/80 outline-ink",
+        ink: "border border-ink/25 bg-transparent text-ink hover:border-ink outline-ink",
         inkOutline:
-          "border border-ink/20 bg-transparent text-ink hover:bg-ink hover:text-paper outline-ink",
+          "border border-ink/25 bg-transparent text-ink hover:border-ink outline-ink",
       },
       size: {
         md: "h-11 px-6",
@@ -23,7 +23,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "solid",
+      variant: "outline",
       size: "md",
     },
   },
