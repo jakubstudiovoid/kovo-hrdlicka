@@ -201,10 +201,6 @@
   }
 
   @media (max-width: 767px) {
-    .about-portrait-img {
-      object-position: center center;
-    }
-
     .about-portrait-fade {
       background: linear-gradient(
         to bottom,

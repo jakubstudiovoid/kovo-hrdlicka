@@ -305,7 +305,7 @@ function AboutTeaser() {
               <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
             </Link>
           </Reveal>
-          <div className="relative grid min-h-80 overflow-hidden">
+          <div className="relative grid min-h-[28rem] overflow-hidden md:min-h-80">
             <img
               src="/hero/pavel-portrait.webp"
               srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
