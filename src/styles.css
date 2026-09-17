@@ -291,11 +291,17 @@
     border-bottom: 1px solid var(--color-border);
     border-radius: 0;
     color: var(--color-fg);
+    color-scheme: dark;
     font: inherit;
     font-size: 1rem;
     padding: 0.9rem 0;
     outline: none;
     transition: border-color 200ms var(--ease-out-quart);
+  }
+
+  .field option {
+    background-color: var(--color-bg-elevated);
+    color: var(--color-fg);
   }
 
   .field::placeholder {
@@ -308,6 +314,12 @@
 
   .field-light {
     border-bottom-color: rgb(12 12 12 / 0.18);
+    color: var(--color-ink);
+    color-scheme: light;
+  }
+
+  .field-light option {
+    background-color: var(--color-paper);
     color: var(--color-ink);
   }
 
