@@ -1,13 +1,121 @@
-import { useState, type FormEvent } from "react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 
+const kindOptions = [...services.map((s) => s.title), "Jiné"];
+
 type ContactFormProps = {
   tone?: "dark" | "light";
 };
+
+function KindSelect({
+  light,
+  fieldClass,
+}: {
+  light: boolean;
+  fieldClass: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const listId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+    function onPointer(e: PointerEvent) {
+      if (!wrapRef.current?.contains(e.target as Node)) setOpen(false);
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={wrapRef} className="relative">
+      <input
+        type="text"
+        name="kind"
+        value={value}
+        required
+        tabIndex={-1}
+        readOnly
+        aria-hidden
+        className="pointer-events-none absolute h-0 w-0 opacity-0"
+      />
+      <button
+        type="button"
+        className={cn(
+          fieldClass,
+          "flex w-full cursor-pointer appearance-none items-center justify-between gap-4 bg-transparent text-left",
+        )}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-controls={listId}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className={value ? undefined : light ? "text-ink-muted" : "text-subtle"}>
+          {value || "Vyberte"}
+        </span>
+        <ChevronDown
+          className={cn(
+            "size-4 shrink-0 transition-transform duration-200",
+            light ? "text-ink-muted" : "text-muted",
+            open && "rotate-180",
+          )}
+          strokeWidth={1.5}
+        />
+      </button>
+      <ul
+        id={listId}
+        role="listbox"
+        hidden={!open}
+        className={cn(
+          "absolute inset-x-0 top-full z-30 mt-px py-1",
+          light ? "bg-paper" : "bg-bg",
+        )}
+      >
+        {kindOptions.map((opt) => {
+          const selected = value === opt;
+          return (
+            <li key={opt} role="option" aria-selected={selected}>
+              <button
+                type="button"
+                className={cn(
+                  "flex w-full items-center justify-between py-3 text-left text-sm tracking-tight transition-colors duration-150",
+                  light
+                    ? selected
+                      ? "text-ink"
+                      : "text-ink-muted hover:text-ink"
+                    : selected
+                      ? "text-fg"
+                      : "text-muted hover:text-fg",
+                )}
+                onClick={() => {
+                  setValue(opt);
+                  setOpen(false);
+                }}
+              >
+                {opt}
+                {selected ? (
+                  <Check className="size-3.5 opacity-70" strokeWidth={1.5} />
+                ) : null}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
 
 export function ContactForm({ tone = "dark" }: ContactFormProps) {
   const [sent, setSent] = useState(false);
@@ -103,20 +211,10 @@ export function ContactForm({ tone = "dark" }: ContactFormProps) {
           placeholder="jan@email.cz"
         />
       </label>
-      <label className="block">
+      <div className="block">
         <span className={label}>Typ zakázky</span>
-        <select className={field} name="kind" required defaultValue="">
-          <option value="" disabled>
-            Vyberte
-          </option>
-          {services.map((s) => (
-            <option key={s.slug} value={s.title}>
-              {s.title}
-            </option>
-          ))}
-          <option value="Jiné">Jiné</option>
-        </select>
-      </label>
+        <KindSelect light={light} fieldClass={field} />
+      </div>
       <label className="block">
         <span className={label}>Zpráva</span>
         <textarea
