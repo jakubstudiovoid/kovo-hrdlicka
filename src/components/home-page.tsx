@@ -305,12 +305,12 @@ function AboutTeaser() {
               <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
             </Link>
           </Reveal>
-          <div className="relative grid min-h-[28rem] overflow-hidden md:min-h-80">
+          <div className="relative grid aspect-square overflow-hidden md:aspect-auto md:min-h-80">
             <img
               src="/hero/pavel-portrait.webp"
-              srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1680w"
+              srcSet="/hero/pavel-portrait-700.webp 700w, /hero/pavel-portrait-1100.webp 1100w, /hero/pavel-portrait.webp 1468w"
               sizes="(min-width: 768px) 32rem, 100vw"
-              width={1680}
+              width={1468}
               height={1344}
               alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
               loading="lazy"
