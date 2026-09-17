@@ -307,9 +307,9 @@ function AboutTeaser() {
           </Reveal>
           <div className="relative grid min-h-[28rem] overflow-hidden md:min-h-80">
             <img
-              src="/hero/pavel-about.webp"
-              width={1680}
-              height={1344}
+              src="/hero/pavel-900.webp"
+              width={1600}
+              height={1289}
               alt="Pavel Hrdlička při práci s rozžhavenou ocelí"
               loading="lazy"
               decoding="async"
