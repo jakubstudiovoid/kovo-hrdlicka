@@ -81,7 +81,7 @@ function RealizaceIndex() {
               Podobné zadání
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-              Schodiště, zábradlí, brány, terasy a atypické konstrukce. Popište
+              Schodiště, zábradlí, brány, terasy, přístřešky a nábytek. Popište
               zakázku, navrhneme řešení.
             </p>
             <Link

@@ -307,7 +307,7 @@ export const projects: Project[] = [
     title: "Dřevník",
     location: "Pozemek",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Dřevník s ocelovou konstrukcí, dřevěnými latěmi a trapézovou střechou.",
     body: [
@@ -328,7 +328,7 @@ export const projects: Project[] = [
     title: "Stojan na dřevo",
     location: "Terasa",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Atypický stojan na palivo. Černý lak, ocelová síť, členěný prostor.",
     body: [
@@ -349,7 +349,7 @@ export const projects: Project[] = [
     title: "Lavice",
     location: "Venkovní posezení",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Venkovní ocelová lavice. Černý lak, vodorovné lamely, svařovaný rám.",
     body: [
@@ -370,7 +370,7 @@ export const projects: Project[] = [
     title: "Předsíň",
     location: "Interiér",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Nábytek do předsíně — ocelový rám, perforovaný plech a dřevo.",
     body: [
@@ -391,7 +391,7 @@ export const projects: Project[] = [
     title: "Venkovní kuchyň",
     location: "Terasa",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Venkovní kuchyňská sestava. Ocelový rám, dřevo a perforovaný plech.",
     body: [
@@ -412,7 +412,7 @@ export const projects: Project[] = [
     title: "Stůl",
     location: "Interiér",
     year: "2024",
-    category: "Atyp",
+    category: "Nábytek",
     excerpt:
       "Stůl s ocelovým rámem, dřevěnou deskou a policí z perforovaného plechu.",
     body: [
@@ -449,7 +449,7 @@ const categoryOrder = [
   "Brány a ploty",
   "Terasy",
   "Přístřešky",
-  "Atyp",
+  "Nábytek",
 ];
 
 export const projectTypes = [
