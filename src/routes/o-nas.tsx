@@ -67,6 +67,10 @@ function AboutPage() {
             <h2 className="font-medium text-3xl tracking-tight">
               Realizace a poptávka
             </h2>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
+              Hotové zakázky jsou v portfoliu. Pro nové zadání stačí popis
+              nebo fotografie místa.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
                 <Link to="/realizace">Realizace</Link>
