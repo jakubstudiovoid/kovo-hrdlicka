@@ -322,6 +322,17 @@
     border-bottom-color: var(--color-fg);
   }
 
+  .field:-webkit-autofill,
+  .field:-webkit-autofill:hover,
+  .field:-webkit-autofill:focus,
+  .field:-webkit-autofill:active {
+    border-bottom-color: var(--color-border);
+    caret-color: var(--color-fg);
+    -webkit-text-fill-color: var(--color-fg);
+    box-shadow: 0 0 0 1000px var(--color-bg) inset;
+    transition: background-color 99999s ease-out;
+  }
+
   .field-light {
     border-bottom-color: rgb(12 12 12 / 0.18);
     color: var(--color-ink);
@@ -339,6 +350,17 @@
 
   .field-light:focus {
     border-bottom-color: var(--color-ink);
+  }
+
+  .field-light:-webkit-autofill,
+  .field-light:-webkit-autofill:hover,
+  .field-light:-webkit-autofill:focus,
+  .field-light:-webkit-autofill:active {
+    border-bottom-color: rgb(12 12 12 / 0.18);
+    caret-color: var(--color-ink);
+    -webkit-text-fill-color: var(--color-ink);
+    box-shadow: 0 0 0 1000px var(--color-paper) inset;
+    transition: background-color 99999s ease-out;
   }
 }
 
