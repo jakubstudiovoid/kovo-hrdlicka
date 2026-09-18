@@ -33,9 +33,8 @@ export const Route = createFileRoute("/realizace/")({
 
 function RealizaceIndex() {
   const { typ } = Route.useSearch();
-  const activeType = projectTypes.find((c) => categorySlug(c) === typ);
-  const visible = activeType
-    ? projects.filter((p) => p.category === activeType)
+  const visible = typ
+    ? projects.filter((p) => categorySlug(p.category) === typ)
     : projects;
 
   return (
@@ -50,13 +49,13 @@ function RealizaceIndex() {
           aria-label="Filtr podle typu"
           className="mb-10 flex flex-wrap gap-x-1 gap-y-2 border-b border-line"
         >
-          <FilterLink label="Vše" active={!activeType} />
+          <FilterLink label="Vše" active={!typ} />
           {projectTypes.map((type) => (
             <FilterLink
               key={type}
               label={type}
               typ={categorySlug(type)}
-              active={activeType === type}
+              active={typ === categorySlug(type)}
             />
           ))}
         </nav>

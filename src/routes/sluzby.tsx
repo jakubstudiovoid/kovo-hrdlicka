@@ -5,6 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { finishes, services } from "@/data/services";
+import { typForServiceTitle } from "@/data/projects";
 import { seoHead } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -54,6 +55,14 @@ function SluzbyPage() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  to="/realizace"
+                  search={{ typ: typForServiceTitle(s.title) }}
+                  className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase transition-colors duration-200 hover:text-steel"
+                >
+                  Hotové realizace
+                  <ArrowUpRight className="size-3.5" strokeWidth={1.75} />
+                </Link>
               </Reveal>
             </div>
           </section>

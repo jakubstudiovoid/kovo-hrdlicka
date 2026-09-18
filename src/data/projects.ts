@@ -458,3 +458,10 @@ export const projectTypes = [
     (c) => !categoryOrder.includes(c),
   ),
 ];
+
+export function typForServiceTitle(title: string) {
+  const match = projectTypes.find(
+    (t) => title === t || title.startsWith(t) || t.startsWith(title),
+  );
+  return categorySlug(match ?? title);
+}
