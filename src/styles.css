@@ -127,7 +127,7 @@
   }
 
   .page-enter {
-    animation: page-enter 1.85s cubic-bezier(0.22, 0.15, 0.25, 1) both;
+    animation: page-enter 1.5s cubic-bezier(0.22, 0.15, 0.25, 1) both;
   }
 
   @media (prefers-reduced-motion: reduce) {
