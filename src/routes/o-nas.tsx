@@ -40,7 +40,6 @@ function AboutPage() {
           <Reveal delay={80}>
             <dl className="mt-12 border-t border-line text-sm">
               {[
-                ["Značka", site.name],
                 ["Firma", site.brand],
                 ["Osoba", site.legalName],
                 ["IČO", site.ico],
