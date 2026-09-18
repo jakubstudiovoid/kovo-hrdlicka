@@ -6,6 +6,8 @@ import {
 } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
 import { NotFound } from "@/components/not-found";
 import { pageTitle, site } from "@/data/site";
@@ -45,7 +47,13 @@ function RootDocument() {
       <body className="bg-bg text-fg">
         <PreviewHostBridge />
         <AuthProvider>
-          <Outlet />
+          <div className="flex min-h-dvh flex-col bg-bg text-fg">
+            <Header />
+            <main id="obsah" className="flex-1 bg-bg">
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
         </AuthProvider>
         <JsonLd />
         <Scripts />

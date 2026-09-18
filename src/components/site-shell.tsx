@@ -1,15 +1,11 @@
 import type { ReactNode } from "react";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { useRouterState } from "@tanstack/react-router";
 
 export function SiteShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   return (
-    <div className="flex min-h-dvh flex-col bg-bg text-fg">
-      <Header />
-      <main id="obsah" className="flex-1 bg-bg">
-        {children}
-      </main>
-      <Footer />
+    <div key={pathname} className="page-enter">
+      {children}
     </div>
   );
 }
