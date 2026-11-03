@@ -126,6 +126,11 @@
     min-height: calc(2 * 1.625em);
   }
 
+  .not-found-num {
+    font-size: clamp(6.5rem, 22vw, 13rem);
+    animation: fade-up 1.2s var(--ease-out-expo) both;
+  }
+
   .page-enter {
     animation: page-enter 1.5s cubic-bezier(0.22, 0.15, 0.25, 1) both;
   }
@@ -417,7 +422,8 @@
   .reveal.is-in,
   .hero-line > span,
   .hero-photo,
-  .hero-fade {
+  .hero-fade,
+  .not-found-num {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
